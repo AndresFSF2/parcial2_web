@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { Injectable, BadRequestException } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Profesor } from './profesor.entity/profesor.entity';
@@ -19,8 +19,8 @@ export class ProfesorService {
 
   async crearProfesor(profesor: Profesor): Promise<Profesor> {
     if (!this.gruposInvestigacion.includes(profesor.grupoInvestigacion)) {
-      throw new BadRequestException(
-        `El grupo de investigación debe ser uno de los siguientes: ${this.gruposInvestigacion.join(', ')}`,
+      throw new BusinessLogicException(
+        `El grupo de investigación debe ser uno de los siguientes: ${this.gruposInvestigacion.join(', ')}`, BusinessError.NOT_FOUND
       );
     }
     return await this.profesorRepository.save(profesor);
