@@ -1,5 +1,6 @@
-import { Entity, Column, PrimaryGeneratedColumn, ManyToOne } from 'typeorm';
-import { Propuesta } from './propuesta.entity';
+/* eslint-disable prettier/prettier */
+import { Entity, Column, PrimaryGeneratedColumn, OneToOne, JoinColumn } from 'typeorm';
+import { Proyecto } from '../../proyecto/proyecto.entity/proyecto.entity';
 
 @Entity()
 export class Estudiante {
@@ -15,6 +16,7 @@ export class Estudiante {
   @Column()
   numeroCreditos: number;
 
-  @ManyToOne(() => Propuesta, propuesta => propuesta.estudiantes)
-  propuesta: Propuesta;
+  @OneToOne(() => Proyecto, proyecto => proyecto.estudiante)
+   @JoinColumn()
+   proyecto: Proyecto;
 }
