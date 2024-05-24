@@ -1,0 +1,329 @@
+{
+	"info": {
+		"_postman_id": "614ff5b8-4c56-41cf-a637-2f2178ee0efa",
+		"name": "Proyectos Grados",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35141867"
+	},
+	"item": [
+		{
+			"name": "Crear Proyecto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"fechaInicio\": \"2023-01-01T00:00:00.000Z\",\n  \"fechaFin\": \"2023-12-31T23:59:59.000Z\",\n  \"url\": \"http://example.com\",\n  \"propuestaId\": 1,\n  \"estudianteId\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/proyectos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"proyectos"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Crear Proyecto",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Typ",
+								"value": "application/jso"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"fechaInicio\": \"2023-01-01T00:00:00.000Z\",\n  \"fechaFin\": \"2023-12-31T23:59:59.999Z\",\n  \"url\": \"http://example.com/proyecto\",\n  \"propuesta\": null,\n  \"estudiante\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/proyectos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectos"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"id\": 1,\n  \"fechaInicio\": \"2023-01-01T00:00:00.000Z\",\n  \"fechaFin\": \"2023-12-31T23:59:59.000Z\",\n  \"url\": \"http://example.com\",\n  \"propuestaId\": 1,\n  \"estudianteId\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "Obtener Proyecto por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/proyectos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"proyectos",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Obtener Proyecto por ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/proyectos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectos",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"id\": 1,\n  \"fechaInicio\": \"2023-01-01T00:00:00.000Z\",\n  \"fechaFin\": \"2023-12-31T23:59:59.000Z\",\n  \"url\": \"http://example.com\",\n  \"propuestaId\": 1,\n  \"estudianteId\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "Crear Profesor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"cedula\": \"1234567890\",\n  \"nombre\": \"Juan Perez\",\n  \"grupoInvestigacion\": \"TICSW\",\n  \"numeroExtension\": \"12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/profesores",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"profesores"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Crear Profesor",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"cedula\": \"1234567890\",\n  \"nombre\": \"Juan Perez\",\n  \"grupoInvestigacion\": \"TICSW\",\n  \"numeroExtension\": \"12345\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/profesores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"profesores"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"cedula\": \"1234567890\",\n    \"nombre\": \"Juan Perez\",\n    \"grupoInvestigacion\": \"TICSW\",\n    \"numeroExtension\": \"12345\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Obtener Profesor por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/profesores/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"profesores",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Obtener Profesor por ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/profesores/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"profesores",
+								"1"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"cedula\": \"1234567890\",\n    \"nombre\": \"Juan Perez\",\n    \"grupoInvestigacion\": \"TICSW\",\n    \"numeroExtension\": \"12345\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Crear Estudiante",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nombre\": \"Maria Lopez\",\n  \"codigo\": \"1234567890\",\n  \"numeroCreditos\": 120\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/estudiantes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"estudiantes"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Crear Estudiante",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombre\": \"Maria Lopez\",\n  \"codigo\": \"1234567890\",\n  \"numeroCreditos\": 120\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/estudiantes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"estudiantes"
+							]
+						}
+					},
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"nombre\": \"Maria Lopez\",\n    \"codigo\": \"1234567890\",\n    \"numeroCreditos\": 120\n}"
+				}
+			]
+		}
+	]
+}
